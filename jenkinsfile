@@ -1,19 +1,28 @@
 pipeline {
     agent any
+
     stages {
         stage('Build') {
             steps {
-                //
+                echo 'Building...'
+                // Add build steps here, for example:
+                // sh 'npm install' (if you are building a Node.js app)
             }
         }
+
         stage('Test') {
             steps {
-                //
+                echo 'Testing...'
+                // Add testing steps here, for example:
+                // sh 'npm test'
             }
         }
+
         stage('Deploy') {
             steps {
-                //
+                echo 'Deploying...'
+                // Add deployment steps here, for example:
+                // sh 'kubectl apply -f deployment.yaml'
             }
         }
     }
